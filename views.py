@@ -12,6 +12,7 @@ def index():
 		date=request.form.get("date")
 		times=request.form.get("times")
 		timee=request.form.get("timee")
+		duration=int(timee)-int(times)
 		print(city+" "+spot)
 
 	return render_template("index.html")
