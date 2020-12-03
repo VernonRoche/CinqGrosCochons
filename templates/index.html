@@ -1,4 +1,5 @@
 <!doctype html>
+<meta charset="UTF-8">
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,10 +19,10 @@
 					<input type="text" name="Ville" placeholder="Ville" :><br>
 					<input type="text" name="Spot" placeholder="Spot" :><br>
 					<input type="text" name="NWaterman" placeholder="Nom du Waterman" :><br>
-					<input type="date" name="Date" placeholder="Date" :><br>
+					<input type="date" value=date name="Date" placeholder="Date" :><br>
+					<p id="text">Heure de début de baignade</p>
 					<input type="time" name="HDB" placeholder="Heure debut baignade" :><br>
-					<input type="time" name="HFB" placeholder="Heure fin baignade" :><br>
-					<input type="time" name="DB" placeholder="Duree de baignade (hh:mm)" :><br>
+					<input type="time" name="HFB" placeholder="Heure fin baignade" :><p id="text">Heure de fin de baignade</p><br>
 					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
 				</form>
 			</div>
