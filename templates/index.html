@@ -11,55 +11,35 @@
 <body>
 	<h1 class="text-center text-primary"> Surfrider</h1><br><br>
 	<script src="js/scripts.js"></script>
+	<h3 class="text-center text-primary">Indentification des prelevements :</h3><br><br>
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h3 class="text-dark">Indentification des prelevements :</h3>
-				<form method="post">
-					<input type="text" name="Ville" placeholder="Ville" :><br>
-					<input type="text" name="Spot" placeholder="Spot" :><br>
-					<input type="text" name="NWaterman" placeholder="Nom du Waterman" :><br>
-					<p id=""text">Date :</p>
-					<input type="date" value=date name="Date" placeholder="'p1'" :><br>
-					<p id="text">Heure de début de baignade</p>
-					<input type="time" name="HDB" placeholder="Heure debut baignade" :><br>
-					<p id="text">Heure de fin de baignade</p>
-					<input type="time" name="HFB" placeholder="Heure fin baignade" :><br>
-					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
+		<center>
+			<form method="post">
+				<div class="form-group">
+					<input type="text" name="Ville" class="col-4 form-control text-center" placeholder="Ville" required>
+				</div>
+				<div class="form-group">
+					<input type="text" name="Spot" class="col-4 form-control text-center" placeholder="Spot" required>
+				</div>
+				<div class="form-group">
+					<input type="text" name="NWaterman" class="col-4 form-control text-center" placeholder="Nom du Waterman" required>
+				</div>
+				<div class="form-group">
+					<label for="Date">Date :</label>
+					<input type="date" class="col-4 form-control text-center" id="Date" required>
+				</div>
+				<div class="form-group">
+					<label for="Heured">Heure de début de la baignade: </label>
+					<input type="time" class="col-4 form-control text-center" id="Heured" required>
+				</div>
+				<div class="form-group">
+					<label for="Heuref">Heure de fin de la baignade: </label>
+					<input type="time" class="col-4 form-control text-center" id="Heuref" required>
+				</div>
+				<button id="env" type="button" class="btn btn-success rounded" name="form">Envoyer</button>
 				</form>
 			</div>
-
-			<div class="col">
-				<h3 class="text-dark">Frequentation du spot :</h3>
-				<form method="post">
-					<input type="number" name="Baigneurs" placeholder="baigneurs (nombre de)" :><br>
-					<input type="number" name="PAN" placeholder="Pratiquants d'activites nautiques (nombre de)" :><br>
-					<p>Bateaux :</p>
-					<input type="number" name="Peche" placeholder="De peche (nombre de)" :><br>
-					<input type="number" name="Loisir" placeholder="De loisir (nombre de)" :><br>
-					<input type="number" name="Avoiles" placeholder="A voiles (nombre de)" :><br>
-					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
-				</form>
-			</div>
-
-			<div class="col">
-				<h3 class="text-dark">Le waterman (surfeur, kitesurfeur,...) :</h3>
-				<form method="post">
-					<input type="checkbox" name="CremeSol" placeholder="Creme solaire" :><br>
-					<input type="checkbox" name="Parfum" placeholder="Parfum/Deodorant" :><br>
-					<input type="checkbox" name="CremeHydra" placeholder="Creme hydratante" :><br>
-					<input type="checkbox" name="Maquillage" placeholder="Maquillage" :><br>
-					<input type="checkbox" name="Essence" placeholder="Essence" :><br>
-					<input type="checkbox" name="Cigarette" placeholder="Cigarette" :><br>
-					<input type="checkbox" name="Engrais" placeholder="Engrais/pesticides" :><br>
-					<input type="checkbox" name="Peintures" placeholder="Peintures" :><br>
-					<input type="checkbox" name="Autre" placeholder="Autre" :><br>
-					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
-				</form>
-			</div>
-		</div>
+		</center
 	</div>
-
-
 </body>
 </html>
