@@ -22,9 +22,14 @@ def requestSQL(command, args):
 	return "Ok"
 
 
+@app.route('/',methods=["GET"])
+def home():
 
-@app.route('/', methods=["GET","POST"])
-def index():
+	return render_template("home.html")
+
+
+@app.route('/form/', methods=["GET","POST"])
+def form():
 	if request.method=="POST":
 		city=request.form.get("city")
 		spot=request.form.get("spot")
@@ -35,7 +40,7 @@ def index():
 		duration=int(timee)-int(times)
 		print(city+" "+spot)
 
-	return render_template("index.html")
+	return render_template("form.html")
 
 @app.route('/frequentation/',methods=["GET","POST"])
 def frequentation():
@@ -63,6 +68,12 @@ def waterman():
 		paints=request.form.get("paints")
 		others=request.form.get("others")
 	return render_template("waterman.html")
+
+
+@app.route('/merci/',methods=["GET"])
+def merci():
+
+	return render_template("merci.html")
 
 if __name__ == "__main__":
 	app.run()
