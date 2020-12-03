@@ -3,7 +3,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<title>Surfrider</title>
+	<title>Formulaire 2/3</title>
 	<meta name="description" content="the description">
 	<meta name="author" content="the content">
 	<link rel="stylesheet" href="css/main.css">
@@ -16,24 +16,24 @@
 		<form method="post">
 				<div class=" form-group">
 					<label for="Baigneurs">Nombre de baigneurs :</label>
-					<input type="number" class="col-4 form-control text-center" id="Baigneurs" placeholder="Baigneurs">
+					<input type="number" min="0" class="col-4 form-control text-center" id="Baigneurs" placeholder="Baigneurs" required>
 				</div>
 			<div class="form-group">
 				<label for="PAN">Nombre de pratiquants d'activités nautiques :</label>
-				<input  type="number" class="col-4 form-control text-center" id="PAN" placeholder="Pratiquants d'activites nautiques" :>
+				<input  type="number" min="0" class="col-4 form-control text-center" id="PAN" placeholder="Pratiquants d'activites nautiques" required>
 			</div>
 
 			<p>Nombre de bateaux :</p>
 			<div class="form-group">
-				<input type="number" id="Peche" class="text-center" placeholder="De Pêche" :>
+				<input type="number" min="0" id="Peche" class="col-4 form-control text-center" placeholder="De Pêche" required>
 			</div>
 			<div class="form-group">
-				<input type="number" id="Loisir" class="text-center" placeholder="De loisir" :>
+				<input type="number" min="0" id="Loisir" class="col-4 form-control text-center" placeholder="De loisir" required>
 			</div>
 			<div class="form-group">
-				<input type="number"  id="Avoiles" class="text-center" placeholder=" A voiles" :>
+				<input type="number" min="0" id="Avoiles" class=" col-4 form-control text-center" placeholder="A voiles" required>
 			</div>
-			<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
+			<button id="env" type="button" class="btn btn-success rounded" value="Envoyer" name="form">Envoyer</button>
 		</form>
 	</div>
 
