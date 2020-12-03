@@ -19,13 +19,12 @@
 					<input type="text" name="Ville" placeholder="Ville" :><br>
 					<input type="text" name="Spot" placeholder="Spot" :><br>
 					<input type="text" name="NWaterman" placeholder="Nom du Waterman" :><br>
-					<SCRIPT LANGUAGE="Javascript">
-					document.getElementById('p1').innerHTML = Date();
-					</SCRIPT>
+					<p id=""text">Date :</p>
 					<input type="date" value=date name="Date" placeholder="'p1'" :><br>
 					<p id="text">Heure de début de baignade</p>
 					<input type="time" name="HDB" placeholder="Heure debut baignade" :><br>
-					<input type="time" name="HFB" placeholder="Heure fin baignade" :><p id="text">Heure de fin de baignade</p><br>
+					<p id="text">Heure de fin de baignade</p>
+					<input type="time" name="HFB" placeholder="Heure fin baignade" :><br>
 					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
 				</form>
 			</div>
@@ -34,11 +33,11 @@
 				<h3 class="text-dark">Frequentation du spot :</h3>
 				<form method="post">
 					<input type="number" name="Baigneurs" placeholder="baigneurs (nombre de)" :><br>
-					<input type="text" name="PAN" placeholder="Pratiquants d'activites nautiques (nombre de)" :><br>
+					<input type="number" name="PAN" placeholder="Pratiquants d'activites nautiques (nombre de)" :><br>
 					<p>Bateaux :</p>
-					<input type="text" name="Peche" placeholder="De peche (nombre de)" :><br>
-					<input type="text" name="Loisir" placeholder="De loisir (nombre de)" :><br>
-					<input type="text" name="Avoiles" placeholder="A voiles (nombre de)" :><br>
+					<input type="number" name="Peche" placeholder="De peche (nombre de)" :><br>
+					<input type="number" name="Loisir" placeholder="De loisir (nombre de)" :><br>
+					<input type="number" name="Avoiles" placeholder="A voiles (nombre de)" :><br>
 					<input id="env" type="submit" class="rounded" value="Envoyer" name="form">
 				</form>
 			</div>
