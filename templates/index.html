@@ -19,7 +19,10 @@
 					<input type="text" name="Ville" placeholder="Ville" :><br>
 					<input type="text" name="Spot" placeholder="Spot" :><br>
 					<input type="text" name="NWaterman" placeholder="Nom du Waterman" :><br>
-					<input type="date" value=date name="Date" placeholder="Date" :><br>
+					<SCRIPT LANGUAGE="Javascript">
+					document.getElementById('p1').innerHTML = Date();
+					</SCRIPT>
+					<input type="date" value=date name="Date" placeholder="'p1'" :><br>
 					<p id="text">Heure de début de baignade</p>
 					<input type="time" name="HDB" placeholder="Heure debut baignade" :><br>
 					<input type="time" name="HFB" placeholder="Heure fin baignade" :><p id="text">Heure de fin de baignade</p><br>
