@@ -72,7 +72,6 @@ def stats():
 
 @app.route('/', methods=["GET"])
 def home():
-	return stats()
 	return render_template("home.html")
 
 
