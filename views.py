@@ -14,13 +14,32 @@ mysql = MySQL(app)
 def requestSQL(command, args):
 	try:
 		cur = mysql.connection.cursor()
+		print("Connection success")
 		cur.execute(command, args)
+		print("Execution success")
 		mysql.connection.commit()
+		print("Commit success")
 		cur.close()
 	except:
 		return 'Error'
 	return "Ok"
 
+
+def requestForm(request):
+	city = request.form.get("city")
+	spot = request.form.get("spot")
+	name = request.form.get("name")
+	date = request.form.get("date")
+	times = request.form.get("times")
+	timee = request.form.get("timee")
+	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
+
+def requestFrequentations(request):
+	swimmers = request.form.get("swimmers")
+	pan = request.form.get("pan")
+	fishing = request.form.get("fishing")
+	entertainment = request.form.get("entertainment")
+	sailing = request.form.get("sailing")
 
 @app.route('/',methods=["GET"])
 def home():
@@ -29,25 +48,16 @@ def home():
 
 @app.route('/form/', methods=["GET","POST"])
 def form():
-	if request.method=="POST":
-		city=request.form.get("city")
-		spot=request.form.get("spot")
-		name=request.form.get("name")
-		date=request.form.get("date")
-		times=request.form.get("times")
-		timee=request.form.get("timee")
-		duration=int(timee)-int(times)
-		print(city+" "+spot)
+	if request.method == "POST":
+		pass
 	return render_template("form.html")
 
-@app.route('/frequentation/',methods=["GET","POST"])
+
+@app.route('/frequentation/', methods=["GET", "POST"])
 def frequentation():
-	if request.method=="POST":
-		swimmers=request.form.get("swimmers")
-		pan=request.form.get("pan")
-		fishing=request.form.get("fishing")
-		entertainment=request.form.get("entertainment")
-		sailing=request.form.get("sailing")
+	if request.method == "POST":
+		return requestForm(request)
+
 	return render_template("frequentation.html")
 
 
