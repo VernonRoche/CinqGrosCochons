@@ -36,7 +36,7 @@
 					<label for="Heuref">Heure de fin de la baignade: </label>
 					<input type="time" name="timee" class="col-4 form-control text-center" required>
 				</div>
-				</form>
+
 
 		</center>
 	</div>
@@ -48,7 +48,7 @@
 	<script src="js/scripts.js"></script>
 	<div class="container">
 		<center>
-		<form action="{{ url_for('waterman') }}" method="post">
+
 				<div class=" form-group">
 					<label for="Baigneurs">Nombre de baigneurs :</label> </br>
 					<img class=img-responsive src="{{ url_for('static', filename='nageur.png')}}"alt="nageur" style=width:3.5% />
@@ -73,7 +73,7 @@
 				<img class=img-responsive src="{{ url_for('static', filename='voile.png')}}" alt="voile" style=width:3.5% />
 				<input type="number" min="0" id="Avoiles" class=" col-4 form-align text-center" placeholder="A voiles" required></br>
 			</div>
-		</form>
+
 		</center>
 	</div>
 
@@ -82,10 +82,10 @@
 
 
 <center>
-	<h3 class="text-primary">Le waterman (surfeur, kitesurfeur,...) :</h3>
+	<h1 class="text-primary">Le waterman (surfeur, kitesurfeur,...) :</h1>
 			<div class="form-group">
 
-					<form action="{{ url_for('merci') }}" method="post">
+
 					<input type="checkbox" class="form-check-input" name="cremeSol" id="cremesolaire" />
 					<label for ="cremesolaire" class="form-check-label">Creme solaire</label><br>
 
