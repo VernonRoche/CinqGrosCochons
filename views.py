@@ -56,7 +56,16 @@ def requestForm(request):
 
 	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
 
-
+@app.route('/afficher_stats/')
+def stats():
+	cur = mysql.connection.cursor()
+	print("Connection success")
+	command = 'select * from session;' #INTO session(waterman, city, spot, date, time, timeEnd) '''
+	cur.execute(command)
+	rows = cur.fetchall()
+	cur.close()
+	print("Execution success")
+	return rows
 
 @app.route('/', methods=["GET"])
 def home():
@@ -75,6 +84,10 @@ def merci():
 		if status != 0:
 			return "Error"
 	return render_template("merci.html")
+
+
+
+
 
 
 if __name__ == "__main__":
