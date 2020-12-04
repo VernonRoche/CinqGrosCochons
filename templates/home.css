@@ -4,3 +4,11 @@ body{
     background-size:cover;
     background-attachment : fixed;
 }
+
+#bottom img {
+    width: 35vw;
+    height: auto;
+    position : absolute;
+    bottom : 0vh;
+    right : 0vw;
+}
