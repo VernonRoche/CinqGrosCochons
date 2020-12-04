@@ -79,6 +79,10 @@ def home():
 def form():
 	return render_template("form.html")
 
+@app.route('/form_en/', methods=["GET", "POST"])
+def form():
+	return render_template("form_en.html")
+
 
 @app.route('/merci/', methods=["GET", "POST"])
 def merci():
@@ -86,6 +90,13 @@ def merci():
 		status = requestForm(request)
 
 	return render_template("merci.html")
+
+@app.route('/thanks/', methods=["GET","POST"])
+def thanks():
+	if request.method == "POST":
+		status = requestForm(request)
+
+	return render_template("thanks.html")
 
 
 
