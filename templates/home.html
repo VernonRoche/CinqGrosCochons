@@ -3,25 +3,22 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='home.css')}}">
       <title>Home</title>
 	<meta name="description" content="the description">
 	<meta name="author" content="the content">
-	<link rel="stylesheet" href="css/main.css">
 
 </head>
   <body>
       <div class="container">
         <div class="row">
-            <button id="env1" type="submit" class="btn btn-muted rounded btn-lg" style=" position:absolute; top:35vh; left:15vw; font-size: 300%; width: auto; height :auto" value="Envoyer1" name="form1"><a href="{{ url_for('form') }}" style="color:white">Version Française</a></button>
-            <button id="env2" type="submit" class="btn btn-muted rounded btn-lg" style="position:absolute; top:35vh; right:15vw; font-size: 300%; width: auto; height :auto" value="Envoyer2" name="form"><a href="{{ url_for('form_en') }}" style="color:white">English Version</a></button>
+            <button id="env1" type="submit" class="btn btn-muted rounded btn-lg" style=" position:absolute; top:35vh; left:15vw; font-size: 300%; width: auto; height :auto" value="Envoyer1" name="form1"><a href="{{ url_for('form') }}" style="color:brown">Version Française</a></button>
+            <button id="env2" type="submit" class="btn btn-muted rounded btn-lg" style="position:absolute; top:35vh; right:15vw; font-size: 300%; width: auto; height :auto" value="Envoyer2" name="form"><a href="{{ url_for('form_en') }}" style="color:brown">English Version</a></button>
         </div>
-        <div id="bottom">
-            <img src="img/homelow.jpg">
-        </div>
+
       </div>
  </body>
-<footer class="page-footer font-small blue pt-4">
+<footer id="bottom" class="footer page-footer font-small blue pt-4">
     <a href="{{ url_for ('stats')}}">Statistiques</a>
 </footer>
 </html>
