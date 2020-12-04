@@ -13,7 +13,7 @@
 	<script src="js/scripts.js"></script>
 	<div class="container">
 		<center>
-		<form method="post">
+		<form action="{{ url_for('waterman') }}" method="post">
 				<div class=" form-group">
 					<label for="Baigneurs">Nombre de baigneurs :</label>
 					<input type="number" min="0" class="col-4 form-control text-center" id="Baigneurs" placeholder="Baigneurs" required>
