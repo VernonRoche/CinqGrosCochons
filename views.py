@@ -31,7 +31,6 @@ def requestSQL(command, args):
 		print("Execution success")
 		mysql.connection.commit()
 		print("Commit success")
-		cur.close()
 	finally:
 		return 1
 	return 0
@@ -91,8 +90,7 @@ def form():
 def merci():
 	if request.method == "POST":
 		status = requestForm(request)
-		if status != 0:
-			return "Error"
+
 	return render_template("merci.html")
 
 
