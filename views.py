@@ -24,8 +24,7 @@ def requestSQL(command, args):
 
 @app.route('/',methods=["GET"])
 def home():
-
-	return render_template("home.html")
+	return render_template("form.html")
 
 
 @app.route('/form/', methods=["GET","POST"])
@@ -39,7 +38,6 @@ def form():
 		timee=request.form.get("timee")
 		duration=int(timee)-int(times)
 		print(city+" "+spot)
-
 	return render_template("form.html")
 
 @app.route('/frequentation/',methods=["GET","POST"])
@@ -72,7 +70,6 @@ def waterman():
 
 @app.route('/merci/',methods=["GET"])
 def merci():
-
 	return render_template("merci.html")
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@
 	<h3 class="text-center text-primary">Indentification des prelevements :</h3><br><br>
 	<div class="container">
 		<center>
-			<form method="post">
+			<form action="{{ url_for('frequentation') }}" method="post">
 				<div class="form-group">
 					<input type="text" name="Ville" class="col-4 form-control text-center" placeholder="Ville" required>
 				</div>
@@ -36,7 +36,7 @@
 					<label for="Heuref">Heure de fin de la baignade: </label>
 					<input type="time" class="col-4 form-control text-center" id="Heuref" required>
 				</div>
-				<button id="env" type="button" class="btn btn-success rounded" name="form">Envoyer</button>
+				<button id="env" type="submit" class="btn btn-success rounded" name="form">Envoyer</button>
 				</form>
 			</div>
 		</center
