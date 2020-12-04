@@ -1,5 +1,24 @@
 <!doctype html>
 <meta charset="UTF-8">
 <html>
-<head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<th>Waterman</th>
+				<th>City</th>
+				<th>Spot</th>
+			</tr>
+			{%for session in list%}
+				<tr>
+					<th>{{session[0]}}</th>
+					<th>{{session[1]}}</th>
+					<th>{{session[2]}}</th>
+				</tr>
+			{%endfor%}
+		</table>
+	</body>
+</html>

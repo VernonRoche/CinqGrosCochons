@@ -16,11 +16,10 @@ def getRequestSQL(command):
 		print("Connection success")
 		cur.execute(command)
 		print("Execution success")
-		mysql.connection.commit()
-		print("Commit success")
-	finally:
-		return 1
-	return 0
+		rows = cur.fetchall()
+		return rows
+	except:
+		return None
 
 
 def requestSQL(command, args):
@@ -31,7 +30,7 @@ def requestSQL(command, args):
 		print("Execution success")
 		mysql.connection.commit()
 		print("Commit success")
-	finally:
+	except:
 		return 1
 	return 0
 
@@ -67,17 +66,13 @@ def requestForm(request):
 
 @app.route('/afficher_stats/')
 def stats():
-	cur = mysql.connection.cursor()
-	print("Connection success")
-	command = 'select * from session;' #INTO session(waterman, city, spot, date, time, timeEnd) '''
-	cur.execute(command)
-	rows = cur.fetchall()
-	cur.close()
-	print("Execution success")
-	return rows
+	rows = getRequestSQL('select * from session;')
+	print(rows)
+	return render_template("afficher_stats.html", list=rows)
 
 @app.route('/', methods=["GET"])
 def home():
+	return stats()
 	return render_template("home.html")
 
 
