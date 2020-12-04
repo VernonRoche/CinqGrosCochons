@@ -6,25 +6,27 @@
 	</head>
 
 	<body>
-		<table>
-			<tr>
-				<th>Waterman</th>
-				<th>City</th>
-				<th>Spot</th>
-				<th>Date</th>
-				<th>Hour Start</th>
-				<th>Hour End</th>
-			</tr>
-			{%for session in list%}
+		<table class="table">
+			<thread class="thead-dark">
 				<tr>
-					<th>{{session[1]}}</th>
-					<th>{{session[2]}}</th>
-					<th>{{session[3]}}</th>
-					<th>{{session[4]}}</th>
-					<th>{{session[5]}}</th>
-					<th>{{session[6]}}</th>
+					<th>Waterman</th>
+					<th>City</th>
+					<th>Spot</th>
+					<th>Date</th>
+					<th>Hour Start</th>
+					<th>Hour End</th>
 				</tr>
-			{%endfor%}
+				{%for session in list%}
+					<tr>
+						<td>{{session[1]}}</td>
+						<td>{{session[2]}}</td>
+						<td>{{session[3]}}</td>
+						<td>{{session[4]}}</td>
+						<td>{{session[5]}}</td>
+						<td>{{session[6]}}</td>
+					</tr>
+				{%endfor%}
+			</thread>
 		</table>
 	</body>
 </html>
