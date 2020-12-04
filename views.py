@@ -10,6 +10,7 @@ app.config['MYSQL_DB'] = 'sql7380110'
 
 mysql = MySQL(app)
 
+
 def requestSQL(command, args):
 	try:
 		cur = mysql.connection.cursor()
@@ -19,19 +20,46 @@ def requestSQL(command, args):
 		mysql.connection.commit()
 		print("Commit success")
 		cur.close()
-	except:
-		return 'Error'
-	return "Ok"
+	finally:
+		return 1
+	return 0
 
 
 def requestForm(request):
+	# Session
 	city = request.form.get("city")
 	spot = request.form.get("spot")
 	name = request.form.get("name")
 	date = request.form.get("date")
 	times = request.form.get("times")
 	timee = request.form.get("timee")
+
+	print(times)
+
+	# Frequentations
+	solcream = request.form.get("solcream")
+	perfume = request.form.get("perfume")
+	hydracream = request.form.get("hydracream")
+	makeup = request.form.get("makeup")
+	petrol = request.form.get("petrol")
+	cigar = request.form.get("cigar")
+	fertilizer = request.form.get("fertilizer")
+	paints = request.form.get("paints")
+	others = request.form.get("others")
+
+	# Products
+	solcream = request.form.get("solcream")
+	perfume = request.form.get("perfume")
+	hydracream = request.form.get("hydracream")
+	makeup = request.form.get("makeup")
+	petrol = request.form.get("petrol")
+	cigar = request.form.get("cigar")
+	fertilizer = request.form.get("fertilizer")
+	paints = request.form.get("paints")
+	others = request.form.get("others")
+
 	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
+
 
 def requestFrequentations(request):
 	swimmers = request.form.get("swimmers")
@@ -40,46 +68,25 @@ def requestFrequentations(request):
 	entertainment = request.form.get("entertainment")
 	sailing = request.form.get("sailing")
 
-@app.route('/',methods=["GET"])
+
+@app.route('/', methods=["GET"])
 def home():
 	return render_template("form.html")
 
 
-@app.route('/form/', methods=["GET","POST"])
+@app.route('/form/', methods=["GET", "POST"])
 def form():
-	if request.method == "POST":
-		pass
 	return render_template("form.html")
 
 
-@app.route('/frequentation/', methods=["GET", "POST"])
-def frequentation():
-	if request.method == "POST":
-		return requestForm(request)
-
-	return render_template("frequentation.html")
-
-
-
-
-@app.route('/waterman/',methods=["GET","POST"])
-def waterman():
-	if request.method=="POST":
-		solcream=request.form.get("solcream")
-		perfume=request.form.get("perfume")
-		hydracream=request.form.get("hydracream")
-		makeup=request.form.get("makeup")
-		petrol=request.form.get("petrol")
-		cigar=request.form.get("cigar")
-		fertilizer=request.form.get("fertilizer")
-		paints=request.form.get("paints")
-		others=request.form.get("others")
-	return render_template("waterman.html")
-
-
-@app.route('/merci/',methods=["GET"])
+@app.route('/merci/', methods=["GET", "POST"])
 def merci():
+	if request.method == "POST":
+		status = requestForm(request)
+		if status != 0:
+			return "Error"
 	return render_template("merci.html")
+
 
 if __name__ == "__main__":
 	app.run()
