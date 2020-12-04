@@ -80,7 +80,7 @@ def form():
 	return render_template("form.html")
 
 @app.route('/form_en/', methods=["GET", "POST"])
-def form():
+def form_en():
 	return render_template("form_en.html")
 
 
