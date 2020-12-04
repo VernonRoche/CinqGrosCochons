@@ -10,6 +10,18 @@ app.config['MYSQL_DB'] = 'sql7380110'
 
 mysql = MySQL(app)
 
+def getRequestSQL(command):
+	try:
+		cur = mysql.connection.cursor()
+		print("Connection success")
+		cur.execute(command)
+		print("Execution success")
+		mysql.connection.commit()
+		print("Commit success")
+	finally:
+		return 1
+	return 0
+
 
 def requestSQL(command, args):
 	try:
@@ -34,8 +46,6 @@ def requestForm(request):
 	times = request.form.get("times")
 	timee = request.form.get("timee")
 
-	print(times)
-
 	# Frequentations
 	swimmers = request.form.get("swimmers")
 	pan = request.form.get("pan")
@@ -54,7 +64,7 @@ def requestForm(request):
 	paints = request.form.get("paints")
 	others = request.form.get("others")
 
-	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
+	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
 
 @app.route('/afficher_stats/')
 def stats():
