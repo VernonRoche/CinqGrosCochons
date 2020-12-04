@@ -16,25 +16,25 @@
 		<center>
 			<form action="{{ url_for('frequentation') }}" method="post">
 				<div class="form-group">
-					<input type="text" name="Ville" class="col-4 form-control text-center" placeholder="Ville" required>
+					<input type="text" name="city" class="col-4 form-control text-center" placeholder="Ville" required>
 				</div>
 				<div class="form-group">
-					<input type="text" name="Spot" class="col-4 form-control text-center" placeholder="Spot" required>
+					<input type="text" name="spot" class="col-4 form-control text-center" placeholder="Spot" required>
 				</div>
 				<div class="form-group">
-					<input type="text" name="NWaterman" class="col-4 form-control text-center" placeholder="Nom du Waterman" required>
+					<input type="text" name="name" class="col-4 form-control text-center" placeholder="Nom du Waterman" required>
 				</div>
 				<div class="form-group">
 					<label for="Date">Date :</label>
-					<input type="date" class="col-4 form-control text-center" id="Date" required>
+					<input type="date" name="date" class="col-4 form-control text-center" required>
 				</div>
 				<div class="form-group">
 					<label for="Heured">Heure de début de la baignade: </label>
-					<input type="time" class="col-4 form-control text-center" id="Heured" required>
+					<input type="time" name="times" class="col-4 form-control text-center" required>
 				</div>
 				<div class="form-group">
 					<label for="Heuref">Heure de fin de la baignade: </label>
-					<input type="time" class="col-4 form-control text-center" id="Heuref" required>
+					<input type="time" name="timee" class="col-4 form-control text-center" required>
 				</div>
 				<button id="env" type="submit" class="btn btn-success rounded" name="form">Envoyer</button>
 				</form>
