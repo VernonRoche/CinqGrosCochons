@@ -16,26 +16,26 @@
 		<form action="{{ url_for('waterman') }}" method="post">
 				<div class=" form-group">
 					<label for="Baigneurs">Nombre de baigneurs :</label> </br>
-					<img class=img-responsive src="images/nageur.png" alt="nageur" style=width:3.5% />
+					<img class=img-responsive src="{{ url_for('static', filename='nageur.png')}}"alt="nageur" style=width:3.5% />
 					<input type="number" min="0" class="col-4 form-align text-center" id="Baigneurs" placeholder="Baigneurs" required>
 				</div>
 			<div class="form-group">
 				<label for="PAN">Nombre de pratiquants d'activités nautiques :</label> </br>
-				<img class=img-responsive src="images/windsurf.png" alt="voile" style=width:3.5% />
+				<img class=img-responsive src="{{ url_for('static', filename='windsurf.png')}}" alt="windsurf" style=width:3.5% />
 				<input  type="number" min="0" class="col-4 form-align text-center" id="PAN" placeholder="Pratiquants d'activites nautiques" required>
 			</div>
 
 			<p>Nombre de bateaux :</p>
 			<div class="form-group">
-				<img class=img-responsive src="images/peche.png" alt="peche" style=width:3.5% />
+				<img class=img-responsive src="{{ url_for('static', filename='peche.png')}}"alt="peche" style=width:3.5% />
 				<input type="number" min="0" id="Peche" class="col-4 form-align text-center" placeholder="De Pêche" required> </br>
 			</div>
 			<div class="form-group">
-				<img class=img-responsive src="images/loisir.png" alt="loisir" style=width:3.5% />
+				<img class=img-responsive src="{{ url_for('static', filename='loisir.png')}}" alt="loisir" style=width:3.5% />
 				<input type="number" min="0" id="Loisir" class="col-4 form-align text-center" placeholder="De loisir" required> </br>
 			</div>
 			<div class="form-group">
-				<img class=img-responsive src="images/voile.png" alt="voile" style=width:3.5% />
+				<img class=img-responsive src="{{ url_for('static', filename='voile.png')}}" alt="voile" style=width:3.5% />
 				<input type="number" min="0" id="Avoiles" class=" col-4 form-align text-center" placeholder="A voiles" required></br>
 			</div>
 			<button id="env" type="submit" class="btn btn-success rounded" value="Envoyer" name="form">Envoyer</button>
