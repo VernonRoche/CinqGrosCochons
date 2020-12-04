@@ -11,36 +11,36 @@
 <body>
 	<h1 class="text-center text-primary"> Surfrider :</h1><br><br>
 	<script src="js/scripts.js"></script>
-	<div class="container">
+	<div class="container" >
 			<h3 class="text-primary">Le waterman (surfeur, kitesurfeur,...) :</h3>
 			<div class="form-group">
 				<form action="{{ url_for('merci') }}" method="post">
 					<input type="checkbox" class="form-check-input" name="cremeSol" id="cremesolaire" />
-					<label for ="cremesolaire">Creme solaire</label><br>
+					<label for ="cremesolaire" class="form-check-label">Creme solaire</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Parfum/Deodorant" id="Parfum/deodorant" />
-					<label for ="Parfum/deodorant">Parfum / Deodorant</label><br>
+					<label for ="Parfum/deodorant" class="form-check-label">Parfum / Deodorant</label><br>
 
 					<input type="checkbox" class="form-check-input" name="CremeHydratante" id="CremeHydratante" />
-					<label for ="CremeHydratante">Creme Hydratante</label><br>
+					<label for ="CremeHydratante" class="form-check-label">Creme Hydratante</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Maquillage" id="Maquillage" />
-					<label for ="Maquillage">Maquillage</label><br>
+					<label for ="Maquillage" class="form-check-label">Maquillage</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Essence" id="Essence" />
-					<label for ="Essence">Essence</label><br>
+					<label for ="Essence" class="form-check-label">Essence</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Cigarette" id="Cigarette" />
-					<label for ="Cigarette">Cigarette</label><br>
+					<label for ="Cigarette" class="form-check-label">Cigarette</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Engrais" id="Engrais" />
-					<label for ="Engrais">Engrais / Pesticides</label><br>
+					<label for ="Engrais" class="form-check-label">Engrais / Pesticides</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Peintures" id="Peintures" />
-					<label for ="Peintures">Peintures</label><br>
+					<label for ="Peintures" class="form-check-label">Peintures</label><br>
 
 					<input type="checkbox" class="form-check-input" name="Autre" id="Autre" />
-					<label for ="Autre">Autre</label><br>
+					<label for ="Autre" class="form-check-label">Autre</label><br>
 					<button id="env" type="button" class="btn btn-success rounded" value="Envoyer" name="form">Envoyer</button>
 				</form>
 			</div>

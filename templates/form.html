@@ -1,5 +1,5 @@
 <!doctype html>
-<meta charset="UTF-8">
+<meta charset="UTF-8" xmlns="http://www.w3.org/1999/html">
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,10 +36,89 @@
 					<label for="Heuref">Heure de fin de la baignade: </label>
 					<input type="time" name="timee" class="col-4 form-control text-center" required>
 				</div>
-				<button id="env" type="submit" class="btn btn-success rounded" name="form">Envoyer</button>
 				</form>
-			</div>
-		</center
+
+		</center>
 	</div>
+
+</br>
+	</br>
+
+<h1 class="text-center text-primary"> Frequentation du spot : </h1><br><br>
+	<script src="js/scripts.js"></script>
+	<div class="container">
+		<center>
+		<form action="{{ url_for('waterman') }}" method="post">
+				<div class=" form-group">
+					<label for="Baigneurs">Nombre de baigneurs :</label> </br>
+					<img class=img-responsive src="{{ url_for('static', filename='nageur.png')}}"alt="nageur" style=width:3.5% />
+					<input type="number" min="0" class="col-4 form-align text-center" id="Baigneurs" placeholder="Baigneurs" required>
+				</div>
+			<div class="form-group">
+				<label for="PAN">Nombre de pratiquants d'activités nautiques :</label> </br>
+				<img class=img-responsive src="{{ url_for('static', filename='windsurf.png')}}" alt="windsurf" style=width:3.5% />
+				<input  type="number" min="0" class="col-4 form-align text-center" id="PAN" placeholder="Pratiquants d'activites nautiques" required>
+			</div>
+
+			<p>Nombre de bateaux :</p>
+			<div class="form-group">
+				<img class=img-responsive src="{{ url_for('static', filename='peche.png')}}"alt="peche" style=width:3.5% />
+				<input type="number" min="0" id="Peche" class="col-4 form-align text-center" placeholder="De Pêche" required> </br>
+			</div>
+			<div class="form-group">
+				<img class=img-responsive src="{{ url_for('static', filename='loisir.png')}}" alt="loisir" style=width:3.5% />
+				<input type="number" min="0" id="Loisir" class="col-4 form-align text-center" placeholder="De loisir" required> </br>
+			</div>
+			<div class="form-group">
+				<img class=img-responsive src="{{ url_for('static', filename='voile.png')}}" alt="voile" style=width:3.5% />
+				<input type="number" min="0" id="Avoiles" class=" col-4 form-align text-center" placeholder="A voiles" required></br>
+			</div>
+		</form>
+		</center>
+	</div>
+
+</br>
+	</br>
+
+
+<center>
+	<h3 class="text-primary">Le waterman (surfeur, kitesurfeur,...) :</h3>
+			<div class="form-group">
+
+					<form action="{{ url_for('merci') }}" method="post">
+					<input type="checkbox" class="form-check-input" name="cremeSol" id="cremesolaire" />
+					<label for ="cremesolaire" class="form-check-label">Creme solaire</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Parfum/Deodorant" id="Parfum/deodorant" />
+					<label for ="Parfum/deodorant" class="form-check-label">Parfum / Deodorant</label><br>
+
+					<input type="checkbox" class="form-check-input" name="CremeHydratante" id="CremeHydratante" />
+					<label for ="CremeHydratante" class="form-check-label">Creme Hydratante</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Maquillage" id="Maquillage" />
+					<label for ="Maquillage" class="form-check-label">Maquillage</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Essence" id="Essence" />
+					<label for ="Essence" class="form-check-label">Essence</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Cigarette" id="Cigarette" />
+					<label for ="Cigarette" class="form-check-label">Cigarette</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Engrais" id="Engrais" />
+					<label for ="Engrais" class="form-check-label">Engrais / Pesticides</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Peintures" id="Peintures" />
+					<label for ="Peintures" class="form-check-label">Peintures</label><br>
+
+					<input type="checkbox" class="form-check-input" name="Autre" id="Autre" />
+					<label for ="Autre" class="form-check-label">Autre</label><br>
+					<button id="env" type="button" class="btn btn-success rounded" value="Envoyer" name="form">Envoyer</button>
+				</form>
+					</center>
+			</div>
+		</div>
+
+	</div>
+
 </body>
 </html>
