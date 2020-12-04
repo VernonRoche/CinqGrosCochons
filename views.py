@@ -54,7 +54,7 @@ def requestForm(request):
 	paints = request.form.get("paints")
 	others = request.form.get("others")
 
-	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
+	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
 
 @app.route('/afficher_stats/')
 def stats():
