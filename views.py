@@ -37,15 +37,11 @@ def requestForm(request):
 	print(times)
 
 	# Frequentations
-	solcream = request.form.get("solcream")
-	perfume = request.form.get("perfume")
-	hydracream = request.form.get("hydracream")
-	makeup = request.form.get("makeup")
-	petrol = request.form.get("petrol")
-	cigar = request.form.get("cigar")
-	fertilizer = request.form.get("fertilizer")
-	paints = request.form.get("paints")
-	others = request.form.get("others")
+	swimmers = request.form.get("swimmers")
+	pan = request.form.get("pan")
+	fishing = request.form.get("fishing")
+	entertainment = request.form.get("entertainment")
+	sailing = request.form.get("sailing")
 
 	# Products
 	solcream = request.form.get("solcream")
@@ -60,13 +56,6 @@ def requestForm(request):
 
 	return requestSQL('''INSERT INTO session(waterman, city, spot, date, time, timeEnd) VALUES(%s, %s, %s, %s, %s)''', (name, city, spot, date, times, timee))
 
-
-def requestFrequentations(request):
-	swimmers = request.form.get("swimmers")
-	pan = request.form.get("pan")
-	fishing = request.form.get("fishing")
-	entertainment = request.form.get("entertainment")
-	sailing = request.form.get("sailing")
 
 
 @app.route('/', methods=["GET"])
