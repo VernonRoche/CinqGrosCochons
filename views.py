@@ -78,7 +78,7 @@ def stats():
 
 @app.route('/', methods=["GET"])
 def home():
-	return render_template("form.html")
+	return render_template("home.html")
 
 
 @app.route('/form/', methods=["GET", "POST"])
