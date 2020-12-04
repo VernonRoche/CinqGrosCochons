@@ -44,6 +44,7 @@
 		<h1 class="text-center text-primary"> Frequentation du spot : </h1><br><br>
 		<div class="container">
 			<center>
+
 				<div class=" form-group">
 					<label for="Baigneurs">Nombre de baigneurs :</label> </br>
 					<img class=img-responsive src="{{ url_for('static', filename='nageur.png')}}"alt="nageur" style=width:3.5% />
@@ -77,6 +78,7 @@
 		<center>
 			<h1 class="text-primary">Le waterman (surfeur, kitesurfeur,...) :</h1>
 			<div class="form-group">
+
 				<input type="checkbox" class="form-check-input" name="cremeSol" id="cremesolaire" />
 				<label for ="cremesolaire" class="form-check-label">Creme solaire</label><br>
 
@@ -103,6 +105,8 @@
 
 				<input type="checkbox" class="form-check-input" name="Autre" id="Autre" />
 				<label for ="Autre" class="form-check-label">Autre</label><br>
+
+				</table>
 				<button id="env" type="submit" class="btn btn-success rounded" value="Envoyer" name="form">Envoyer</button>
 			</div>
 		</center>
